@@ -1,0 +1,31 @@
+Instruction to run this application.
+
+Step1- checkout from git repo (https://github.com/amitthakurr16/ThreadRace-IncrementNumber.git)
+Step2- open it on ide and update project using (Maven -> update project)
+step 3- change database connection paramete (like url, user, password, schema name in url ) in application.properties file. 
+Step-4- Run the application on server (	Run As -> Run on Server)
+Step-5 - open url http://localhost:8080/increment  (if server is running on other port(8080) then change accordingly in url) 
+Step 6-  open jmeter and open "springRestApiTest.jmx". (File -> open and choose "springRestApiTest.jmx" )
+Step -7  After loaded successfully then click on Home Page (inside jmeter project) and verify port no and protocol(http/https). For me, it's http and 8080.
+Step-8 click on start button.
+Step-9 for testing you can hit again this url (http://localhost:8080/increment) on browser and verify the result.
+
+
+
+
+Create table query -
+ 
+ 
+CREATE TABLE `number` (
+  `id` int(11) NOT NULL,
+  `num` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+);
+
+Insert query -
+
+INSERT INTO `number` (`id`, `num`) VALUES ('1', '0');
+
+Select query -
+
+SELECT * FROM `number`;
